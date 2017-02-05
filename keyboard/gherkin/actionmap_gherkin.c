@@ -9,18 +9,15 @@
 #define   AC_BLD                  ACTION_BACKLIGHT_DECREASE()
 #define   AC_BLI                  ACTION_BACKLIGHT_INCREASE()
 
-#define   AC_TL_BS_L1             ACTION_LAYER_TAP_KEY(1,         KC_BSPACE)
-#define   AC_TL_V_L2              ACTION_LAYER_TAP_KEY(2,         KC_V)
-#define   AC_TL_SP_L3             ACTION_LAYER_TAP_KEY(3,         KC_SPACE)
-#define   AC_TL_B_L4              ACTION_LAYER_TAP_KEY(4,         KC_B)
-
 #define   AC_TM_Z_LCTL            ACTION_MODS_TAP_KEY(MOD_LCTL,   KC_Z)
 #define   AC_TM_X_LALT            ACTION_MODS_TAP_KEY(MOD_LALT,   KC_X)
+#define   AC_TM_C_LGUI            ACTION_MODS_TAP_KEY(MOD_LGUI,   KC_C)
+#define   AC_TL_V_L1              ACTION_LAYER_TAP_KEY(1,         KC_V)
 
-#define   AC_TM_N_LGUI            ACTION_MODS_TAP_KEY(MOD_LGUI,   KC_N)
-#define   AC_TM_M_RCTL            ACTION_MODS_TAP_KEY(MOD_RCTL,   KC_M)
+#define   AC_TL_B_L3              ACTION_LAYER_TAP_KEY(3,         KC_B)
+#define   AC_TL_N_L4              ACTION_LAYER_TAP_KEY(4,         KC_N)
 
-#define   AC_TM_ESC               ACTION_MODS_TAP_KEY(MOD_RSFT,   KC_ESC)
+#define   AC_TM_RSHIFT_ESC        ACTION_MODS_TAP_KEY(MOD_RSFT,   KC_ESC)
 
 #define   AC_S01                  ACTION_MODS_KEY(MOD_LSFT,       KC_1)
 #define   AC_S02                  ACTION_MODS_KEY(MOD_LSFT,       KC_2)
@@ -49,29 +46,25 @@
 
 const action_t PROGMEM actionmaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = ACTIONMAP( \
-    Q,          W,          E,        R,        T,         Y,         U,        I,          O,          P,        \
-    A,          S,          D,        F,        G,         H,         J,        K,          L,          ENT,      \
-    TM_Z_LCTL,  TM_X_LALT,  C,        TL_V_L2,  TL_BS_L1,  TL_SP_L3,  TL_B_L4,  TM_N_LGUI,  TM_M_RCTL,  TM_ESC),
+    Q,          W,          E,          R,        T,         Y,         U,        I,          O,          P,        \
+    A,          S,          D,          F,        G,         H,         J,        K,          L,          ENT,      \
+    TM_Z_LCTL,  TM_X_LALT,  TM_C_LGUI,  TL_V_L1,  BSPACE,    SPACE,     TL_B_L3,  TL_N_L4,    M,          TM_RSHIFT_ESC),
 
-    // Numbers & Symbols
     [1] = ACTIONMAP( \
     1,     2,     3,     4,     5,     6,     7,     8,     9,     0,      \
     TAB,   MINS,  EQL,   BSLS,  SLSH,  LBRC,  RBRC,  SCLN,  QUOT,  GRV,    \
     TRNS,  TRNS,  TRNS,  TRNS,  DEL,   TRNS,  TRNS,  COMM,  DOT,   TRNS),
 
-    // Shift + Numbers & Symbols
     [2] = ACTIONMAP( \
     S01,   S02,   S03,   S04,   S05,   S06,   S07,   S08,   S09,   S10,    \
     TRNS,  S11,   S12,   S15,   S18,   S13,   S14,   S19,   S20,   S21,    \
     TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS),
 
-    // Meta & Arrow
     [3] = ACTIONMAP( \
     BTN1,  MS_U,  BTN2,  WH_D,  TRNS,  TRNS,  BLD,   BLI,   TRNS,  TRNS,   \
     MS_L,  MS_D,  MS_R,  WH_U,  TRNS,  LEFT,  DOWN,  UP,    RGHT,  TRNS,   \
     MPRV,  MPLY,  MSTP,  MNXT,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS),
 
-    // Functions & Special
     [4] = ACTIONMAP( \
     F1,    F2,    F3,    F4,    F5,    F6,    F7,    F8,    F9,    F10,   \
     F11,   F12,   F13,   F14,   F15,   F16,   F17,   F18,   F19,   F20,   \
