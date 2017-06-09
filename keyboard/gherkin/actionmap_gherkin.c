@@ -16,6 +16,7 @@
 
 #define   AC_TL_B_L3              ACTION_LAYER_TAP_KEY(3,         KC_B)
 #define   AC_TL_N_L4              ACTION_LAYER_TAP_KEY(4,         KC_N)
+#define   AC_TM_M_RGUI            ACTION_MODS_TAP_KEY(MOD_RGUI,   KC_M)
 
 #define   AC_TM_RSHIFT_ESC        ACTION_MODS_TAP_KEY(MOD_RSFT,   KC_ESC)
 
@@ -42,13 +43,14 @@
 #define   AC_S20                  ACTION_MODS_KEY(MOD_LSFT,       KC_QUOT)
 #define   AC_S21                  ACTION_MODS_KEY(MOD_LSFT,       KC_GRV)
 
+#define   AC_PASS                 ACTION_MODS_KEY(MOD_LALT | MOD_LSFT | MOD_LGUI, KC_L)
 #define   AC_LOCK                 ACTION_MODS_KEY(MOD_LCTL | MOD_LSFT | MOD_LALT, KC_L)
 
 const action_t PROGMEM actionmaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = ACTIONMAP( \
     Q,          W,          E,          R,        T,         Y,         U,        I,          O,          P,        \
     A,          S,          D,          F,        G,         H,         J,        K,          L,          ENT,      \
-    TM_Z_LCTL,  TM_X_LALT,  TM_C_LGUI,  TL_V_L1,  BSPACE,    SPACE,     TL_B_L3,  TL_N_L4,    M,          TM_RSHIFT_ESC),
+    TM_Z_LCTL,  TM_X_LALT,  TM_C_LGUI,  TL_V_L1,  BSPACE,    SPACE,     TL_B_L3,  TL_N_L4,    TM_M_RGUI,  TM_RSHIFT_ESC),
 
     [1] = ACTIONMAP( \
     1,     2,     3,     4,     5,     6,     7,     8,     9,     0,      \
@@ -63,10 +65,10 @@ const action_t PROGMEM actionmaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [3] = ACTIONMAP( \
     BTN1,  MS_U,  BTN2,  WH_D,  TRNS,  TRNS,  BLD,   BLI,   TRNS,  TRNS,   \
     MS_L,  MS_D,  MS_R,  WH_U,  TRNS,  LEFT,  DOWN,  UP,    RGHT,  TRNS,   \
-    MPRV,  MPLY,  MSTP,  MNXT,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS),
+    MPRV,  MPLY,  MSTP,  MNXT,  TRNS,  MUTE,  TRNS,  VOLD,  VOLU,  TRNS),
 
     [4] = ACTIONMAP( \
     F1,    F2,    F3,    F4,    F5,    F6,    F7,    F8,    F9,    F10,   \
     F11,   F12,   F13,   F14,   F15,   F16,   F17,   F18,   F19,   F20,   \
-    BTLD,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  LOCK)
+    BTLD,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  PASS,  LOCK)
 };
