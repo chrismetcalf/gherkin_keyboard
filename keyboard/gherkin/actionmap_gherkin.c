@@ -47,28 +47,32 @@
 #define   AC_LOCK                 ACTION_MODS_KEY(MOD_LCTL | MOD_LSFT | MOD_LALT, KC_L)
 
 const action_t PROGMEM actionmaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = ACTIONMAP( \
-    Q,              W,          E,          R,          T,         Y,         U,        I,          O,          P,        \
-    A,              S,          D,          F,          G,         H,         J,        K,          L,          ENT,      \
-    TM_LSHIFT_ESC,  TM_Z_LCTL,  TM_X_LALT,  TM_C_LGUI,  BSPACE,    SPACE,     TL_V_L1,  TL_B_L3,  TL_N_L4,    TM_M_RGUI),
+    [0] = ACTIONMAP(\
+    Q,                  W,          E,          R,          T,       Y,      U,        I,        O,        P,           \
+    A,                  S,          D,          F,          G,       H,      J,        K,        L,        ENT,         \
+    TM_LSHIFT_ESC,      TM_Z_LCTL,  TM_X_LALT,  TM_C_LGUI,  BSPACE,  SPACE,  TL_V_L1,  TL_B_L3,  TL_N_L4,  TM_M_RGUI),
 
-    [1] = ACTIONMAP( \
-    1,     2,     3,     4,     5,     6,     7,     8,     9,     0,      \
-    TAB,   MINS,  EQL,   BSLS,  SLSH,  LBRC,  RBRC,  SCLN,  QUOT,  GRV,    \
-    TRNS,  TRNS,  TRNS,  TRNS,  DEL,   TRNS,  TRNS,  COMM,  DOT,   TRNS),
+    // Up / Layer 1
+    [1] = ACTIONMAP(\
+    1,                  2,          3,          4,          5,       6,      7,        8,        9,        0,           \
+    TAB,                MINS,       EQL,        BSLS,       SLSH,    LBRC,   RBRC,     SCLN,     QUOT,     GRV,         \
+    TRNS,               TRNS,       TRNS,       TRNS,       DEL,     TRNS,   TRNS,     COMM,     DOT,      TRNS),
 
-    [2] = ACTIONMAP( \
-    S01,   S02,   S03,   S04,   S05,   S06,   S07,   S08,   S09,   S10,    \
-    TRNS,  S11,   S12,   S15,   S18,   S13,   S14,   S19,   S20,   S21,    \
-    TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS),
+    // Shift + Up / Layer 2
+    [2] = ACTIONMAP(\
+    S01,                S02,        S03,        S04,        S05,     S06,    S07,      S08,      S09,      S10,         \
+    TRNS,               S11,        S12,        S15,        S18,     S13,    S14,      S19,      S20,      S21,         \
+    TRNS,               TRNS,       TRNS,       TRNS,       TRNS,    TRNS,   TRNS,     TRNS,     TRNS,     TRNS),
 
-    [3] = ACTIONMAP( \
-    BTN1,  MS_U,  BTN2,  WH_D,  TRNS,  TRNS,  BLD,   BLI,   TRNS,  TRNS,   \
-    MS_L,  MS_D,  MS_R,  WH_U,  TRNS,  LEFT,  DOWN,  UP,    RGHT,  TRNS,   \
-    MPRV,  MPLY,  MSTP,  MNXT,  TRNS,  MUTE,  VOLD,  VOLU,  TRNS,  TRNS),
+    // Down / Layer 3
+    [3] = ACTIONMAP(\
+    BTN1,               MS_U,       BTN2,       WH_D,       TRNS,    TRNS,   BLD,      BLI,      TRNS,     TRNS,        \
+    MS_L,               MS_D,       MS_R,       WH_U,       TRNS,    LEFT,   DOWN,     UP,       RGHT,     TRNS,        \
+    MPRV,               MPLY,       MSTP,       MNXT,       TRNS,    MUTE,   VOLD,     TRNS,     VOLU,     TRNS),
 
-    [4] = ACTIONMAP( \
-    F1,    F2,    F3,    F4,    F5,    F6,    F7,    F8,    F9,    F10,   \
-    F11,   F12,   F13,   F14,   F15,   F16,   F17,   F18,   F19,   F20,   \
-    BTLD,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  TRNS,  PASS,  LOCK)
+    // FN / Layer 4
+    [4] = ACTIONMAP(\
+    F1,                 F2,         F3,         F4,         F5,      F6,     F7,       F8,       F9,       F10,         \
+    F11,                F12,        F13,        F14,        F15,     F16,    F17,      F18,      F19,      F20,         \
+    BTLD,               TRNS,       TRNS,       TRNS,       TRNS,    TRNS,   TRNS,     PASS,     TRNS,     LOCK)
 };
