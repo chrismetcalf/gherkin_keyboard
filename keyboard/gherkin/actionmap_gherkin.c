@@ -65,7 +65,7 @@ const action_t PROGMEM actionmaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [3] = ACTIONMAP( \
     BTN1,  MS_U,  BTN2,  WH_D,  TRNS,  TRNS,  BLD,   BLI,   TRNS,  TRNS,   \
     MS_L,  MS_D,  MS_R,  WH_U,  TRNS,  LEFT,  DOWN,  UP,    RGHT,  TRNS,   \
-    MPRV,  MPLY,  MSTP,  MNXT,  TRNS,  TRNS,  MUTE,  VOLD,  VOLU,  TRNS),
+    MPRV,  MPLY,  MSTP,  MNXT,  TRNS,  MUTE,  VOLD,  VOLU,  TRNS,  TRNS),
 
     [4] = ACTIONMAP( \
     F1,    F2,    F3,    F4,    F5,    F6,    F7,    F8,    F9,    F10,   \
