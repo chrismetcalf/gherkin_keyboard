@@ -48,9 +48,9 @@
 
 const action_t PROGMEM actionmaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = ACTIONMAP( \
-    Q,              W,          E,          R,        T,         Y,         U,        I,          O,          P,        \
-    A,              S,          D,          F,        G,         H,         J,        K,          L,          ENT,      \
-    TM_LSHIFT_ESC,  TM_Z_LCTL,  TM_X_LALT,  TM_C_LGUI,  TL_V_L1,  BSPACE,    SPACE,     TL_B_L3,  TL_N_L4,    TM_M_RGUI),
+    Q,              W,          E,          R,          T,         Y,         U,        I,          O,          P,        \
+    A,              S,          D,          F,          G,         H,         J,        K,          L,          ENT,      \
+    TM_LSHIFT_ESC,  TM_Z_LCTL,  TM_X_LALT,  TM_C_LGUI,  BSPACE,    SPACE,     TL_V_L1,  TL_B_L3,  TL_N_L4,    TM_M_RGUI),
 
     [1] = ACTIONMAP( \
     1,     2,     3,     4,     5,     6,     7,     8,     9,     0,      \
