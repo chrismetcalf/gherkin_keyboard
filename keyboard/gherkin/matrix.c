@@ -160,21 +160,21 @@ static void  init_cols(void)
 
 static matrix_row_t read_cols(void)
 {
-/* //LED on Bottom of switch
+    //LED on Bottom of switch
     return (PIND&(1<<0) ? 0 : (1<<0)) |
            (PIND&(1<<4) ? 0 : (1<<1)) |
            (PINC&(1<<6) ? 0 : (1<<2)) |
            (PIND&(1<<7) ? 0 : (1<<3)) |
            (PINE&(1<<6) ? 0 : (1<<4)) |
            (PINB&(1<<4) ? 0 : (1<<5));
-*/
+/*
 //LED on Top of switch
     return (PIND&(1<<0) ? 0 : (1<<5)) |
            (PIND&(1<<4) ? 0 : (1<<4)) |
            (PINC&(1<<6) ? 0 : (1<<3)) |
            (PIND&(1<<7) ? 0 : (1<<2)) |
            (PINE&(1<<6) ? 0 : (1<<1)) |
-           (PINB&(1<<4) ? 0 : (1<<0));
+           (PINB&(1<<4) ? 0 : (1<<0));*/
 }
 
 /* Row pin configuration
@@ -187,14 +187,14 @@ static void unselect_rows(void)
     // Hi-Z(DDR:0, PORT:0) to unselect
     DDRF  &= ~0b10000000;
     PORTF &= ~0b10000000;
-	DDRB  &= ~0b01001110;
+    DDRB  &= ~0b01001110;
     PORTB &= ~0b01001110;
 }
 
 static void select_row(uint8_t row)
 {
     // Output low(DDR:1, PORT:0) to select
-/* //LED on Bottom of switch
+    //LED on Bottom of switch
     switch (row) {
         case 0:
             DDRB  |= (1<<6);
@@ -217,7 +217,7 @@ static void select_row(uint8_t row)
             PORTF &= ~(1<<7);
             break;
     }
-*/
+/*
 //LED on Top of switch
     switch (row) {
         case 4:
@@ -241,5 +241,5 @@ static void select_row(uint8_t row)
             PORTF &= ~(1<<7);
             break;
     }
-
+*/
 }

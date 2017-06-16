@@ -9,13 +9,15 @@
 #define   AC_BLD                  ACTION_BACKLIGHT_DECREASE()
 #define   AC_BLI                  ACTION_BACKLIGHT_INCREASE()
 
+// Bottom Row
 #define   AC_TM_LSHIFT_ESC        ACTION_MODS_TAP_KEY(MOD_LSFT,   KC_ESC)
 #define   AC_TM_Z_LCTL            ACTION_MODS_TAP_KEY(MOD_LCTL,   KC_Z)
-#define   AC_TM_X_LALT            ACTION_MODS_TAP_KEY(MOD_LALT,   KC_X)
-#define   AC_TM_C_LGUI            ACTION_MODS_TAP_KEY(MOD_LGUI,   KC_C)
-#define   AC_TL_V_L1              ACTION_LAYER_TAP_KEY(1,         KC_V)
-
-#define   AC_TL_B_L3              ACTION_LAYER_TAP_KEY(3,         KC_B)
+#define   AC_TM_X_LGUI            ACTION_MODS_TAP_KEY(MOD_LGUI,   KC_X)
+#define   AC_TL_C_L1              ACTION_LAYER_TAP_KEY(1,         KC_C)
+// Backspace
+// Space
+#define   AC_TL_V_L3              ACTION_LAYER_TAP_KEY(3,         KC_V)
+#define   AC_TM_B_RALT            ACTION_MODS_TAP_KEY(MOD_RALT,   KC_B)
 #define   AC_TL_N_L4              ACTION_LAYER_TAP_KEY(4,         KC_N)
 #define   AC_TM_M_RGUI            ACTION_MODS_TAP_KEY(MOD_RGUI,   KC_M)
 
@@ -48,9 +50,9 @@
 
 const action_t PROGMEM actionmaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = ACTIONMAP(\
-    Q,                  W,          E,          R,          T,       Y,      U,        I,        O,        P,           \
-    A,                  S,          D,          F,          G,       H,      J,        K,        L,        ENT,         \
-    TM_LSHIFT_ESC,      TM_Z_LCTL,  TM_X_LALT,  TM_C_LGUI,  BSPACE,  SPACE,  TL_V_L1,  TL_B_L3,  TL_N_L4,  TM_M_RGUI),
+    Q,                  W,          E,          R,          T,       Y,      U,        I,         O,        P,           \
+    A,                  S,          D,          F,          G,       H,      J,        K,         L,        ENT,         \
+    TM_LSHIFT_ESC,      TM_Z_LCTL,  TM_X_LGUI,  TL_C_L1,    BSPACE,  SPACE,  TL_V_L3,  TM_B_RALT, TL_N_L4,  TM_M_RGUI),
 
     // Up / Layer 1
     [1] = ACTIONMAP(\
@@ -68,7 +70,7 @@ const action_t PROGMEM actionmaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [3] = ACTIONMAP(\
     BTN1,               MS_U,       BTN2,       WH_D,       TRNS,    TRNS,   BLD,      BLI,      TRNS,     TRNS,        \
     MS_L,               MS_D,       MS_R,       WH_U,       TRNS,    LEFT,   DOWN,     UP,       RGHT,     TRNS,        \
-    TRNS,               MPRV,       MPLY,       MSTP,       MNXT,    MUTE,   VOLD,     TRNS,     VOLU,     TRNS),
+    TRNS,               MPRV,       MPLY,       MSTP,       MNXT,    MUTE,   TRNS,     VOLD,     VOLU,     TRNS),
 
     // FN / Layer 4
     [4] = ACTIONMAP(\
