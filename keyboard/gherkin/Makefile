@@ -64,7 +64,7 @@ CONFIG_H = config.h
 # MCU name
 #MCU = at90usb1287
 MCU = atmega32u4
-PROGRAM_CMD = avrdude -p $(MCU) -c avr109 -P /dev/tty.usbmodem14421 -U flash:w:$(TARGET).hex
+PROGRAM_CMD = avrdude -p $(MCU) -c avr109 -P /dev/tty.usbmodem1431 -U flash:w:$(TARGET).hex
 # -b 57600
 
 # Processor frequency.
